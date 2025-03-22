@@ -7,7 +7,7 @@ const PORT = 3001;
 
 app.use(cors());
 
-const VITE_NEWS_API_KEY = '4cadd57a58c14ea4b4c2dc0b00bc5ae8';
+const NEWS_API_KEY = '4cadd57a58c14ea4b4c2dc0b00bc5ae8';
 
 app.get('/api/news', async (req, res) => {
   try {
