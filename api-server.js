@@ -22,7 +22,7 @@ app.get('/api/news', async (req, res) => {
   try {
     const response = await axios.get(NEWS_API_URL, {
       headers: {
-        'User-Agent': 'YourAppName/1.0', // Helps avoid 426 errors
+        'User-Agent': 'News Application/1.0', // Helps avoid 426 errors
       },
       params: {
         q: 'tesla',
