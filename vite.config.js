@@ -14,12 +14,7 @@ export default defineConfig({
       ],
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          fontawesome: [
-            '@fortawesome/react-fontawesome',
-            '@fortawesome/fontawesome-svg-core',
-            '@fortawesome/free-solid-svg-icons'
-          ]
+          vendor: ['react', 'react-dom', 'react-router-dom']
         },
       },
     },
