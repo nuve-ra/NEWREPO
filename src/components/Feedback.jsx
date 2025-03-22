@@ -37,24 +37,10 @@ const Feedback = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-4">
-      <div className="flex items-start gap-3 mb-4">
-        <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-          <img 
-            src="https://via.placeholder.com/40" 
-            alt="Reader" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div>
-          <h2 className="font-medium text-sm">Hi Reader,</h2>
-          <p className="text-xs text-gray-600">Here's your News!</p>
-        </div>
-      </div>
-
       <h3 className="font-medium text-sm mb-3">Have a Feedback?</h3>
       <button
         onClick={() => setIsOpen(true)}
-        className="w-full py-2 px-4 bg-pink-200 text-pink-700 rounded-md hover:bg-pink-300 transition-colors text-sm"
+        className="w-full py-2 px-4 bg-green-200 text-green-700 rounded-md hover:bg-green-300 transition-colors text-sm"
       >
         We're Listening!
       </button>
@@ -62,6 +48,21 @@ const Feedback = () => {
       {isOpen && (
         <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
           <div className="max-w-2xl mx-auto px-6 py-8 h-screen overflow-y-auto">
+            {/* Reader Icon with Text */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-full overflow-hidden">
+                <img 
+                  src="https://via.placeholder.com/40" 
+                  alt="Reader" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="font-medium text-sm">Hi Reader,</h2>
+                <p className="text-xs text-gray-600">Here's your News!</p>
+              </div>
+            </div>
+
             <div className="flex justify-end mb-4">
               <button
                 onClick={() => setIsOpen(false)}
@@ -70,104 +71,86 @@ const Feedback = () => {
                 <i className="fas fa-times text-xl"></i>
               </button>
             </div>
-            
-            <h2 className="text-xl font-medium text-gray-800 mb-2">
-              Thank you so much for taking the time!
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Please provide the below details!
-            </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm text-gray-600 mb-1">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-gray-300"
-                  placeholder="Enter Your Full Name"
-                />
-              </div>
+            <h2 className="text-2xl font-bold mb-6">Thank you so much for taking the time!</h2>
+            <p className="text-gray-600 mb-8">Please provide the below details!</p>
 
-              <div>
-                <label className="block text-sm text-gray-600 mb-1">
-                  Address
-                </label>
-                <textarea
-                  name="address"
-                  value={formData.address}
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-gray-300"
-                  placeholder="Enter your full Postal Address"
-                  rows="3"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Address
+                  </label>
+                  <input
+                    type="text"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
                     Country
                   </label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="country"
-                      value={formData.country}
-                      onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-gray-300 pr-10"
-                      placeholder="Enter Your Country Name"
-                    />
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                      <i className="fas fa-search text-gray-400 text-sm"></i>
-                    </div>
-                  </div>
+                  <input
+                    type="text"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md"
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
                     State
                   </label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="state"
-                      value={formData.state}
-                      onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-gray-300 pr-10"
-                      placeholder="Enter Your State Name"
-                    />
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                      <i className="fas fa-search text-gray-400 text-sm"></i>
-                    </div>
-                  </div>
+                  <input
+                    type="text"
+                    name="state"
+                    value={formData.state}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md"
+                  />
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">
-                    Email Id
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
                   </label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-3 py-2 border ${
-                      emailError ? 'border-red-500' : 'border-gray-200'
-                    } rounded focus:outline-none focus:border-gray-300`}
-                    placeholder="Enter Your Mail Id"
+                    className={`w-full p-2 border rounded-md ${emailError ? 'border-red-500' : ''}`}
+                    required
                   />
                   {emailError && (
                     <p className="text-red-500 text-xs mt-1">{emailError}</p>
                   )}
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">
-                    Mobile Number
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Mobile
                   </label>
                   <div className="flex">
                     <div className="w-12 flex items-center justify-center border border-gray-200 border-r-0 rounded-l bg-gray-50">
@@ -182,31 +165,30 @@ const Feedback = () => {
                       name="mobile"
                       value={formData.mobile}
                       onChange={handleChange}
-                      className="flex-1 px-3 py-2 border border-gray-200 rounded-r focus:outline-none focus:border-gray-300"
-                      placeholder="Enter Your Mobile Number"
+                      className="flex-1 p-2 border rounded-r rounded-md"
                     />
                   </div>
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm text-gray-600 mb-1">
-                  Write Your Feedback
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Feedback
                 </label>
                 <textarea
                   name="feedback"
                   value={formData.feedback}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-gray-300"
-                  placeholder="Write Your Feedback"
                   rows="4"
-                />
+                  className="w-full p-2 border rounded-md"
+                  required
+                ></textarea>
               </div>
 
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none"
+                  className="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
                 >
                   Submit Feedback
                 </button>
