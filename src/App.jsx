@@ -16,7 +16,7 @@ const Sidebar = ({ view, setView, navigate }) => (
     <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">
-          <img src="https://via.placeholder.com/40" alt="User" className="w-full h-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww" alt="User" className="w-full h-full object-cover" />
         </div>
         <div>
           <h2 className="font-medium text-sm">Hi Reader,</h2>
