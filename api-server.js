@@ -7,14 +7,14 @@ const PORT = 3001;
 
 app.use(cors());
 
-const NEWS_API_KEY = '4cadd57a58c14ea4b4c2dc0b00bc5ae8';
+const VITE_NEWS_API_KEY = '4cadd57a58c14ea4b4c2dc0b00bc5ae8';
 
 app.get('/api/news', async (req, res) => {
   try {
     const response = await axios.get('https://newsapi.org/v2/everything?q=tesla&apiKey=4cadd57a58c14ea4b4c2dc0b00bc5ae8', {
       params: {
         q: 'tesla',
-        apiKey: NEWS_API_KEY
+        apiKey: VITE_NEWS_API_KEY
       }
     });
     res.json(response.data);
