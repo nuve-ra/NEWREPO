@@ -12,7 +12,7 @@ const NewsFeed = ({ view }) => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/everything?q=tesla&apiKey=4cadd57a58c14ea4b4c2dc0b00bc5ae8');
+        const response = await fetch(`https://newsapi.org/v2/everything?q=tesla&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch news');
