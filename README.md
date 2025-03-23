@@ -26,4 +26,4 @@ You can see the error in the console (browser inspection tools).
 Next Steps
 If any modifications or additional requirements are needed, please let me know.
 Best Regards,
-Nupoor Verm
+Nupoor Verma
