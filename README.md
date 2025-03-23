@@ -1,14 +1,29 @@
 ﻿# News-api
 # NEWREPO
-//Hi i have comleted the project ,but there is one error that is from newsapi.org.
-Im getting the error: 426, You can also see it in the inspection,console.
-which means that the site or apikey which im using to fetch the data needs to be upgraded,
-in shorted i need to buy its upgraded version then only i can use it in production.
-//As far as developement,that is the localhost which is running on port 3001 is working and fully completed with
-all the requirements as per the project demands.
-//You can run the cli command: npm run dev
-it will open the localhost where you can see the news as well.
-//community is also added,by clicking on it ,will lead you to community page.
-If there is any changes or requirement needed by my side please do let me know.
-Regards
-Nupoor Verma.
+Project Completion Update
+Project Status:  Fully completed with all required features.
+Local Development:
+The project runs successfully on localhost (port 3001).
+
+You can start it using the command:
+npm run dev
+Once started, the news is displayed correctly.
+
+Community Feature:
+A Community section has been added.
+Clicking on it navigates to the Community Page.
+
+Issue Encountered 
+Error: 426 
+Reason: The API key from newsapi.org requires an upgrade to work in production.
+To use it in production, an upgraded (paid) version of the API key is needed.
+
+It only works in development mode on localhost.
+
+Inspection:
+You can see the error in the console (browser inspection tools).
+
+Next Steps
+If any modifications or additional requirements are needed, please let me know.
+Best Regards,
+Nupoor Verm
